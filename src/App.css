@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  background-image: url(../assets/johannes-plenio-DKix6Un55mw-unsplash.jpg);
+  background-size: cover;
+}
+
+label {
+  color: white;
+}
+
