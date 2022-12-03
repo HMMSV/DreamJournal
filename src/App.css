@@ -1,4 +1,4 @@
-.App {
+/* /* .App {
   text-align: center;
 }
 
@@ -34,9 +34,9 @@
   }
   to {
     transform: rotate(360deg);
-  }
-}
-
+  } */
+/* } */ 
+/*  */
 body {
   background-image: url(../assets/johannes-plenio-DKix6Un55mw-unsplash.jpg);
   background-size: cover;
@@ -46,3 +46,11 @@ label {
   color: white;
 }
 
+h1 {
+  text-align: center;
+  color: white;
+}
+
+input {
+  padding: 100px;
+}

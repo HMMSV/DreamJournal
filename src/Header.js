@@ -1,11 +1,9 @@
-import './App.css';
+import React from 'react';
 
 const Header = () => {
     return (
         <header>
-            <div>
-            <h1>Dream Journal!</h1>
-            </div>
+            <h1>Your Dream Journal!</h1>
         </header>
     )
 }

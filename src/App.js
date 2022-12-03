@@ -1,6 +1,8 @@
 import firebase from './firebase';
 import { useEffect, useState } from 'react';
 import { getDatabase, ref, onValue, push, remove } from 'firebase/database';
+import Header from './Header.js';
+import Footer from './Footer';
 import './App.css';
 
 function App() {
@@ -62,11 +64,12 @@ const [userInput, setUserInput] = useState('');
 
   return (
     <div>
+    <Header />
       <ul>
         {dreams.map((dream) => {
           return (
             <li key={dream.key}>
-              <p>{dream.name} - {dream.key}</p>
+              <p>{dream.name}</p>
               <button onClick={() => handleRemoveDream(dream.key)}>Get out of here dream!</button>
             </li>
           )
@@ -82,6 +85,7 @@ const [userInput, setUserInput] = useState('');
         />
         <button onClick={handleSubmit}>Add dream!</button>
       </form>
+      <Footer />
     </div>
   );
 }
