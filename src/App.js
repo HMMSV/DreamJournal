@@ -63,18 +63,8 @@ const [userInput, setUserInput] = useState('');
 
 
   return (
-    <div>
+    <div className='wrapper'>
     <Header />
-      <ul>
-        {dreams.map((dream) => {
-          return (
-            <li key={dream.key}>
-              <p>{dream.name}</p>
-              <button onClick={() => handleRemoveDream(dream.key)}>Get out of here dream!</button>
-            </li>
-          )
-        })}
-      </ul>
       <form action="submit">
         <label htmlFor="newDream">Enter your dream here!</label>
         <input 
@@ -85,6 +75,17 @@ const [userInput, setUserInput] = useState('');
         />
         <button onClick={handleSubmit}>Add dream!</button>
       </form>
+      <ul>
+        {dreams.map((dream) => {
+          return (
+            <li key={dream.key}>
+              <p>{dream.name}</p>
+              <button onClick={() => handleRemoveDream(dream.key)}>Remove dream!</button>
+            </li>
+          )
+        })
+        }
+      </ul>
       <Footer />
     </div>
   );

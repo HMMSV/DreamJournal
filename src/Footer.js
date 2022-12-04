@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
     return (
         <footer>
-            <p>Built by Heather Voisin 2022</p>
+            <p>&copy; 2022 developed + designed by Heather Voisin</p>
         </footer>
     )
 }

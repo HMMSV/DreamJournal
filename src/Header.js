@@ -3,7 +3,8 @@ import React from 'react';
 const Header = () => {
     return (
         <header>
-            <h1>Your Dream Journal!</h1>
+            <h1>The Dream Keeper!</h1>
+            <h2>Your personal online dream journal &#128151;</h2>
         </header>
     )
 }
