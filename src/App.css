@@ -29,14 +29,13 @@ form {
   align-items: center;
 }
 
-input {
-  padding-top: 0px;
-  padding-bottom: 100px;
+.dreamInput {
+  padding-bottom: 200px;
   font-weight: 700;
   margin: 20px;
   opacity: 60%;
   width: 50%;
-  height: 20vh;
+  word-wrap: break-word;
 }
 
 ul {

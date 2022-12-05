@@ -4,6 +4,8 @@ import { getDatabase, ref, onValue, push, remove } from 'firebase/database';
 import Header from './Header.js';
 import Footer from './Footer';
 import './App.css';
+import DreamCard from './DreamCard';
+import DreamForm from './DreamForm';
 
 function App() {
 
@@ -53,39 +55,39 @@ const [userInput, setUserInput] = useState('');
     setUserInput('');
   }
 
+  const [dreamToDeleteId, setDreamToDeleteId] = useState(undefined)
+
+  const handleRemoveMessage = (dreamId) => {
+    setDreamToDeleteId(dreamId)
+  }
+
   const handleRemoveDream = (dreamId) => {
         // reference the database
     const database = getDatabase(firebase);
     const dbRef = ref(database, `/${dreamId}`);
     
     remove(dbRef)
+    setDreamToDeleteId(undefined)
   }
 
 
   return (
     <div className='wrapper'>
     <Header />
-      <form action="submit">
-        <label htmlFor="newDream">Enter your dream here!</label>
-        <input 
-        type="text" 
-        id="newDream" 
-        onChange={handleInputChange}
-        value={userInput}
-        />
-        <button onClick={handleSubmit}>Add dream!</button>
-      </form>
+    <DreamForm handleInputChange={handleInputChange} userInput={userInput} handleSubmit={handleSubmit}  />
       <ul>
         {dreams.map((dream) => {
           return (
-            <li key={dream.key}>
-              <p>{dream.name}</p>
-              <button onClick={() => handleRemoveDream(dream.key)}>Remove dream!</button>
-            </li>
+            <DreamCard key={dream.key} dream={dream} handleRemoveMessage={handleRemoveMessage} />
           )
         })
         }
       </ul>
+        {dreamToDeleteId && (
+        <div>Are you sure you want to delete your dream?
+          <button onClick={() => handleRemoveDream(dreamToDeleteId)}>Delete it!</button>
+        </div>
+        )} 
       <Footer />
     </div>
   );
