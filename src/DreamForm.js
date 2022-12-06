@@ -2,7 +2,7 @@ const DreamForm = ({handleInputChange, userInput, handleSubmit}) => {
 
     return(
         <form action="submit">
-            <label htmlFor="newDream">Please select the date and then enter your dream here!</label>
+            <label htmlFor="newDream">Please select the date and then enter your dream below! &#128564;</label>
             <input 
             type="date" 
             id="date" 

@@ -1,8 +1,9 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&family=Montserrat:wght@500&display=swap');
+
 body {
   background-image: url(../assets/wolf-zimmermann-6sf5rf8QYFE-unsplash.jpg);
   background-size: cover;
-  font-family:Georgia, 'Times New Roman', Times, serif;
   max-width: 100%;
 }
 
@@ -12,15 +13,22 @@ body {
   margin: 0 auto;
 }
 
+header p {
+  font-family: 'Lora', serif;
+  margin: 50px 150px;
+}
+
 h1, h2 {
   text-align: center;
   color: white;
+  font-family: 'Montserrat', sans-serif;
 }
+
 
 label {
   color: white;
   font-weight: 700;
-  margin-top: 100px;
+  margin-bottom: 30px;
 }
 
 form {
@@ -36,6 +44,7 @@ form {
   opacity: 60%;
   width: 50%;
   word-wrap: break-word;
+  font-family: 'Lora', serif;
 }
 
 ul {
@@ -46,17 +55,45 @@ ul {
 
 ul li {
   list-style: none;
-  margin: 50px;
+  margin: 20px 50px;
   border: 2px solid;
   padding: 10px;
   box-shadow: 6px 4px 8px;
+  align-items: center;
 }
 
 ul li p {
+  font-family: 'Lora', serif;
   background-color: lightgray;
   opacity: 70%;
   padding: 80px;
   font-weight: 700;
+}
+
+button {
+    font-family: 'Montserrat', sans-serif;
+    align-items: center;
+    text-align: center;
+}
+
+.deleteMessage {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  bottom: 50px;
+  left: 200px;
+  background-color: lightgray;
+  color: red;
+  font-weight: 600;
+  padding: 20px;
+  width: 150px;
+  opacity: 70%;
+}
+
+.deleteMessage button {
+  padding: 5px;
+  margin: 10px;
+  width: 100px;
 }
 
 footer {
@@ -77,4 +114,5 @@ footer {
   ul li {
     align-items: center;
   }
+
 }

@@ -55,6 +55,7 @@ const [userInput, setUserInput] = useState('');
     setUserInput('');
   }
 
+  // confirmation of delete message
   const [dreamToDeleteId, setDreamToDeleteId] = useState(undefined)
 
   const handleRemoveMessage = (dreamId) => {
@@ -84,7 +85,7 @@ const [userInput, setUserInput] = useState('');
         }
       </ul>
         {dreamToDeleteId && (
-        <div>Are you sure you want to delete your dream?
+        <div className='deleteMessage'>Wait! Are you sure you want to delete your dream?
           <button onClick={() => handleRemoveDream(dreamToDeleteId)}>Delete it!</button>
         </div>
         )} 
