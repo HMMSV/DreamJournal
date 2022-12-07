@@ -55,7 +55,7 @@ const [userInput, setUserInput] = useState('');
     setUserInput('');
   }
 
-  // confirmation of delete message
+  // confirmation of deletion action/message
   const [dreamToDeleteId, setDreamToDeleteId] = useState(undefined)
 
   const handleRemoveMessage = (dreamId) => {
@@ -74,12 +74,18 @@ const [userInput, setUserInput] = useState('');
 
   return (
     <div className='wrapper'>
-    <Header />
-    <DreamForm handleInputChange={handleInputChange} userInput={userInput} handleSubmit={handleSubmit}  />
+      <Header />
+      <DreamForm 
+      handleInputChange={handleInputChange} 
+      userInput={userInput} 
+      handleSubmit={handleSubmit} />
       <ul>
         {dreams.map((dream) => {
           return (
-            <DreamCard key={dream.key} dream={dream} handleRemoveMessage={handleRemoveMessage} />
+            <DreamCard 
+            key={dream.key} 
+            dream={dream} 
+            handleRemoveMessage={handleRemoveMessage} />
           )
         })
         }

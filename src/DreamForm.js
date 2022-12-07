@@ -8,10 +8,11 @@ const DreamForm = ({handleInputChange, userInput, handleSubmit}) => {
             id="date" 
             onChange={handleInputChange}
             value={userInput} />
-            <input
+            <textarea
             className="dreamInput" 
             type="text" 
-            id="newDream" 
+            id="newDream"
+            wrap="soft" 
             onChange={handleInputChange}
             value={userInput}
             />

@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&family=Montserrat:wght@500&display=swap');
 
 body {
-  background-image: url(../assets/wolf-zimmermann-6sf5rf8QYFE-unsplash.jpg);
+  background-image: url(../assets/backgroundImage.jpg);
   background-size: cover;
   max-width: 100%;
 }
@@ -16,6 +16,8 @@ body {
 header p {
   font-family: 'Lora', serif;
   margin: 50px 150px;
+  font-size: 1rem;
+  text-align: center;
 }
 
 h1, h2 {
@@ -38,13 +40,16 @@ form {
 }
 
 .dreamInput {
-  padding-bottom: 200px;
+  padding: 0px 1px 150px 1px;
   font-weight: 700;
   margin: 20px;
   opacity: 60%;
   width: 50%;
   word-wrap: break-word;
+  word-break: break-all;
   font-family: 'Lora', serif;
+  font-size: 1rem;
+  resize: none;
 }
 
 ul {
@@ -66,25 +71,50 @@ ul li p {
   font-family: 'Lora', serif;
   background-color: lightgray;
   opacity: 70%;
-  padding: 80px;
+  padding: 40px;
   font-weight: 700;
+  font-size: 0.9rem;
 }
 
 button {
     font-family: 'Montserrat', sans-serif;
-    align-items: center;
-    text-align: center;
+    /* align-items: center;
+    text-align: center; */
+    font-size: 0.9rem;
+    align-self: center;
+    color: #fff;
+    border: 2px solid lightskyblue;
+    border-color: lightskyblue;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: transparent;
+    cursor: pointer;
+    box-shadow: 0 0 40px 40px lightskyblue inset, 0 0 0 0 lightskyblue;
+    transition: all 150ms ease-in-out;
 }
 
+button:hover {
+    color: #fff;
+    outline: 0;
+    box-shadow: 0 0 10px 0 lightskyblue inset, 0 0 10px 4px lightskyblue;
+}
+
+button:focus {
+    color: #fff;
+    outline: 0;
+    box-shadow: 0 0 10px 0 lightskyblue inset, 0 0 10px 4px lightskyblue;
+  }
+
 .deleteMessage {
+  font-family: 'Montserrat', sans-serif;
   display: flex;
   flex-direction: column;
   position: relative;
   bottom: 50px;
   left: 200px;
   background-color: lightgray;
-  color: red;
-  font-weight: 600;
+  color: darkred;
+  font-weight: 700;
   padding: 20px;
   width: 150px;
   opacity: 70%;
