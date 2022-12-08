@@ -1,38 +1,148 @@
-.App {
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&family=Montserrat:wght@500&display=swap');
+
+body {
+  background-image: url(../assets/backgroundImage.jpg);
+  background-size: cover;
+  max-width: 100%;
+}
+
+.wrapper {
+  max-width: 1280px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+header p {
+  font-family: 'Lora', serif;
+  margin: 50px 150px;
+  font-size: 1rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1, h2 {
+  text-align: center;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+label {
+  color: white;
+  font-weight: 700;
+  margin-bottom: 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.dreamInput {
+  padding: 0px 1px 150px 1px;
+  font-weight: 700;
+  margin: 20px;
+  opacity: 60%;
+  width: 50%;
+  word-wrap: break-word;
+  word-break: break-all;
+  font-family: 'Lora', serif;
+  font-size: 1rem;
+  resize: none;
+}
+
+ul {
+  margin: 100px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul li {
+  list-style: none;
+  margin: 20px 50px;
+  border: 2px solid;
+  padding: 10px;
+  box-shadow: 6px 4px 8px;
+  align-items: center;
+}
+
+ul li p {
+  font-family: 'Lora', serif;
+  background-color: lightgray;
+  opacity: 70%;
+  padding: 40px;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+button {
+    font-family: 'Montserrat', sans-serif;
+    /* align-items: center;
+    text-align: center; */
+    font-size: 0.9rem;
+    align-self: center;
+    color: #fff;
+    border: 2px solid lightskyblue;
+    border-color: lightskyblue;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: transparent;
+    cursor: pointer;
+    box-shadow: 0 0 40px 40px lightskyblue inset, 0 0 0 0 lightskyblue;
+    transition: all 150ms ease-in-out;
+}
+
+button:hover {
+    color: #fff;
+    outline: 0;
+    box-shadow: 0 0 10px 0 lightskyblue inset, 0 0 10px 4px lightskyblue;
+}
+
+button:focus {
+    color: #fff;
+    outline: 0;
+    box-shadow: 0 0 10px 0 lightskyblue inset, 0 0 10px 4px lightskyblue;
+  }
+
+.deleteMessage {
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  bottom: 50px;
+  left: 200px;
+  background-color: lightgray;
+  color: darkred;
+  font-weight: 700;
+  padding: 20px;
+  width: 150px;
+  opacity: 70%;
+}
+
+.deleteMessage button {
+  padding: 5px;
+  margin: 10px;
+  width: 100px;
+}
+
+footer {
+  text-align: center;
   color: white;
+  margin-top: 100px;
+  font-weight: 600;
 }
 
-.App-link {
-  color: #61dafb;
-}
+/* MEDIA QUERIES */
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 560px) {
+  ul {
+    display: flex;
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  ul li {
+    align-items: center;
   }
+
 }
